@@ -9,6 +9,13 @@ Version Summary
 *****************************/
 const NUM_SUITS = 4;
 const DECK_SIZE = 52;
+
+/**********************************
+Card class - 
+getValue -
+getSuit - 
+setSuit -
+***********************************/
 class Card {
 	constructor(value, suit) {
 		this._value = value;
@@ -28,6 +35,13 @@ class Card {
 	}
 }
 
+/**************************
+Deck class to contain Card objects
+Functions:
+populateDeck - Generates a normal deck of playing cards
+shuffleDeck - Randomizes the order of the deck
+drawCard - 
+***************************/
 class Deck {
 	this._deck = new Card[DECK_SIZE];
 	this._suits = ["Spade", "Clubs", "Diamond", "Heart"];
@@ -55,9 +69,40 @@ class Deck {
 						deck[i*NUM_SUITS+j].setValue(i);
 				}
 				
-				deck[i*NUM_SUITS+j].setSuit(this._suits[j]);
+				deck[i*NUM_SUITS+j].setSuit(this._suits[j]); //each card gets a suit
 				
 			}
 		}
 	}
+	
+	shuffleDeck() {
+		
+	}
+	
+	drawCard() {
+		return this._deck.pop();
+	}
+	
+	addCard (card) {
+		this._deck.push(card);
+	}
+	
+	dealCards() {
+		
+	}
+}
+
+/*********************************
+Player class contains:
+hand - Array of cards dealt from the deck
+**********************************/
+class Player {
+	this._hand = new Array(); //unlimited amount
+	this._playerID = 0;
+	this._name = "";
+	
+	playCard(card) {
+	
+	}
+	
 }
